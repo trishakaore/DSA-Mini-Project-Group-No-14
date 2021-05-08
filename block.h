@@ -2,16 +2,17 @@
 #define MINIPROJ_BLOCK_H
 
 #include "user.h"
+#include<stdlib.h>
+#include<stdio.h>
 
 typedef struct Block block;
 typedef struct block_transact block_transact;
 typedef struct Block* block_ptr;
-//typedef struct head head;
-//typedef struct block_header block_header;
 
 
 int block_num = 1;
-int transactions = 0;   //set to zero for every new block and increment one by one
+int transactions = 0; 
+ //set to zero for every new block and increment one by one
 
 struct block_transact{
     long to;

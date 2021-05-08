@@ -1,0 +1,3 @@
+/home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/cmake-build-debug/CMakeFiles/DSA_Mini_Project_Group_No_14.dir

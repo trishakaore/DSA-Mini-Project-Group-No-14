@@ -1,5 +1,5 @@
 #include "block.h"
-//#include <malloc.h>
+
 
 
 block_ptr Init_block_chain()
@@ -11,6 +11,7 @@ block_ptr Init_block_chain()
     strcpy (head->prev_block_hash, "0");
     head->nonce = (rand() % 500) + 1;
 
+    trav = malloc(sizeof(block));
     trav = head;
     transactions = 0;
 
@@ -22,11 +23,11 @@ void add_block()    //always validate before add?  //after transaction has been 
     block_num++;
     transactions = 0; //check
 
-    block_ptr tmp;
+    //block_ptr tmp;
     char hash_value[30];
 
-    tmp = malloc(sizeof(block));
-
+    block_ptr tmp = malloc(sizeof(block));
+    printf("initial %p\n",&tmp);
     tmp->block_index = block_num;
     tmp->nonce = (rand() % 500) + 1;
     //must calc. the hash value of trav and store it in hash_value[30]
@@ -35,8 +36,8 @@ void add_block()    //always validate before add?  //after transaction has been 
     trav = tmp;
 
     strcpy(trav->prev_block_hash, hash_value);   // hafta do this using hash
-
-    free(tmp);
+    printf("final %p\n",&tmp);
+    //free(tmp);
 
 //    trav->next = tmp;
 //    //must calc. the hash value of trav and store it in hash_value[30]

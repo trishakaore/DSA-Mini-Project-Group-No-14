@@ -1,8 +1,9 @@
+#ifndef MINIPROJ_USER_H
+#define MINIPROJ_USER_H
 #include<stdio.h>
 #include<time.h>
 #include<stdlib.h>
-#include <malloc.h>
-#include <string.h>
+#include<string.h>
 
 typedef struct user user;
 typedef struct datee datee;
@@ -45,4 +46,11 @@ void makeUser();
     void setDate(long);
     void setTime(long);
 
-void transaction(user, user, double);
+void transaction();
+void printHistory(transact *l1);
+void updateHistory(long int from_ID, long int to_ID, double amount, struct transact **head_ref);
+void update_trav(long int from_ID, long int to_ID, double amount);
+
+#endif
+
+

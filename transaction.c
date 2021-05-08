@@ -1,6 +1,7 @@
-#include "user.h"
+
 #include "block.h"
-#include <stdio.h>
+
+//#include <stdio.h>
 
 void update_trav(long int from_ID, long int to_ID, double amount)
 {
@@ -8,6 +9,9 @@ void update_trav(long int from_ID, long int to_ID, double amount)
     trav->t_array[transactions].to = to_ID;
     trav->t_array[transactions].amt = amount;
     transactions++;
+
+    if(transactions==2)
+        add_block();
 }
 
 void updateHistory(long int from_ID, long int to_ID, double amount, struct transact **head_ref)

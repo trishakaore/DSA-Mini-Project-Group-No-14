@@ -21,7 +21,10 @@ long makeID(){
             }
 
         else {
-            whatever = (rand() % 9) + 1;
+            whatever = rand() % 10;
+            if (whatever == 0) {
+                whatever += 1;
+                }
             ID += (whatever*1000) ;
             }
         }
