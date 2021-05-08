@@ -92,7 +92,7 @@ user_interface:
     }
     else if (strcmp(choice, "exit") == 0)
     {
-        printf("Are you sure want to exit? (y/n) ");
+        printf("Are you sure you want to exit? (y/n) ");
         scanf("%c", &buf);
         if (buf == 'y' || buf == 'Y')
         {
