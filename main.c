@@ -2,6 +2,7 @@
 #include "transaction.c"
 #include "user.c"
 #include "attack_1.c"
+#include "validate.c"
 #include <ctype.h>
 
 int main()
