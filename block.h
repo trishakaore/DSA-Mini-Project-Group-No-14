@@ -27,6 +27,7 @@ struct Block {
     char prev_block_hash[30];
     int nonce;
     block_ptr prev;
+    block_ptr next;
 };
 
 

@@ -12,7 +12,16 @@ void attack()
 
     srand(time(NULL));
     int rndnum=((rand())%50)+1;
+
+
     //t=t->next;
+    t = t->prev;
+
+    if (rndnum > t->block_index) {
+        printf("Attack failed\n");
+        return;
+    }
+
     while(t != NULL)
     {
         if(t->block_index == rndnum)
@@ -23,6 +32,7 @@ void attack()
             while (changed == t->nonce) {
                 changed = (rand() % 500) + 1;
             }
+            printf("Attack Successful\n");
 
             t->nonce = changed;
             break;
@@ -30,9 +40,5 @@ void attack()
      t=t->prev;
     }
 
-    if(t == NULL)
-    {
-        printf("Attack failed\n");
-    }
 
 }

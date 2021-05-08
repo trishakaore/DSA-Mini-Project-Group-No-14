@@ -76,27 +76,27 @@ include CMakeFiles/DSA_Mini_Project_Group_No_14.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/DSA_Mini_Project_Group_No_14.dir/flags.make
 
-CMakeFiles/DSA_Mini_Project_Group_No_14.dir/mainblock.c.o: CMakeFiles/DSA_Mini_Project_Group_No_14.dir/flags.make
-CMakeFiles/DSA_Mini_Project_Group_No_14.dir/mainblock.c.o: ../mainblock.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/DSA_Mini_Project_Group_No_14.dir/mainblock.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/DSA_Mini_Project_Group_No_14.dir/mainblock.c.o -c /home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/mainblock.c
+CMakeFiles/DSA_Mini_Project_Group_No_14.dir/validate.c.o: CMakeFiles/DSA_Mini_Project_Group_No_14.dir/flags.make
+CMakeFiles/DSA_Mini_Project_Group_No_14.dir/validate.c.o: ../validate.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/DSA_Mini_Project_Group_No_14.dir/validate.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/DSA_Mini_Project_Group_No_14.dir/validate.c.o -c /home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/validate.c
 
-CMakeFiles/DSA_Mini_Project_Group_No_14.dir/mainblock.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DSA_Mini_Project_Group_No_14.dir/mainblock.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/mainblock.c > CMakeFiles/DSA_Mini_Project_Group_No_14.dir/mainblock.c.i
+CMakeFiles/DSA_Mini_Project_Group_No_14.dir/validate.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DSA_Mini_Project_Group_No_14.dir/validate.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/validate.c > CMakeFiles/DSA_Mini_Project_Group_No_14.dir/validate.c.i
 
-CMakeFiles/DSA_Mini_Project_Group_No_14.dir/mainblock.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DSA_Mini_Project_Group_No_14.dir/mainblock.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/mainblock.c -o CMakeFiles/DSA_Mini_Project_Group_No_14.dir/mainblock.c.s
+CMakeFiles/DSA_Mini_Project_Group_No_14.dir/validate.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DSA_Mini_Project_Group_No_14.dir/validate.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/validate.c -o CMakeFiles/DSA_Mini_Project_Group_No_14.dir/validate.c.s
 
 # Object files for target DSA_Mini_Project_Group_No_14
 DSA_Mini_Project_Group_No_14_OBJECTS = \
-"CMakeFiles/DSA_Mini_Project_Group_No_14.dir/mainblock.c.o"
+"CMakeFiles/DSA_Mini_Project_Group_No_14.dir/validate.c.o"
 
 # External object files for target DSA_Mini_Project_Group_No_14
 DSA_Mini_Project_Group_No_14_EXTERNAL_OBJECTS =
 
-DSA_Mini_Project_Group_No_14: CMakeFiles/DSA_Mini_Project_Group_No_14.dir/mainblock.c.o
+DSA_Mini_Project_Group_No_14: CMakeFiles/DSA_Mini_Project_Group_No_14.dir/validate.c.o
 DSA_Mini_Project_Group_No_14: CMakeFiles/DSA_Mini_Project_Group_No_14.dir/build.make
 DSA_Mini_Project_Group_No_14: CMakeFiles/DSA_Mini_Project_Group_No_14.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable DSA_Mini_Project_Group_No_14"

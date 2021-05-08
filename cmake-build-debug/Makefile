@@ -142,32 +142,32 @@ DSA_Mini_Project_Group_No_14/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA_Mini_Project_Group_No_14.dir/build.make CMakeFiles/DSA_Mini_Project_Group_No_14.dir/build
 .PHONY : DSA_Mini_Project_Group_No_14/fast
 
-mainblock.o: mainblock.c.o
+validate.o: validate.c.o
 
-.PHONY : mainblock.o
+.PHONY : validate.o
 
 # target to build an object file
-mainblock.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA_Mini_Project_Group_No_14.dir/build.make CMakeFiles/DSA_Mini_Project_Group_No_14.dir/mainblock.c.o
-.PHONY : mainblock.c.o
+validate.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA_Mini_Project_Group_No_14.dir/build.make CMakeFiles/DSA_Mini_Project_Group_No_14.dir/validate.c.o
+.PHONY : validate.c.o
 
-mainblock.i: mainblock.c.i
+validate.i: validate.c.i
 
-.PHONY : mainblock.i
+.PHONY : validate.i
 
 # target to preprocess a source file
-mainblock.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA_Mini_Project_Group_No_14.dir/build.make CMakeFiles/DSA_Mini_Project_Group_No_14.dir/mainblock.c.i
-.PHONY : mainblock.c.i
+validate.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA_Mini_Project_Group_No_14.dir/build.make CMakeFiles/DSA_Mini_Project_Group_No_14.dir/validate.c.i
+.PHONY : validate.c.i
 
-mainblock.s: mainblock.c.s
+validate.s: validate.c.s
 
-.PHONY : mainblock.s
+.PHONY : validate.s
 
 # target to generate assembly for a file
-mainblock.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA_Mini_Project_Group_No_14.dir/build.make CMakeFiles/DSA_Mini_Project_Group_No_14.dir/mainblock.c.s
-.PHONY : mainblock.c.s
+validate.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DSA_Mini_Project_Group_No_14.dir/build.make CMakeFiles/DSA_Mini_Project_Group_No_14.dir/validate.c.s
+.PHONY : validate.c.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... DSA_Mini_Project_Group_No_14"
-	@echo "... mainblock.o"
-	@echo "... mainblock.i"
-	@echo "... mainblock.s"
+	@echo "... validate.o"
+	@echo "... validate.i"
+	@echo "... validate.s"
 .PHONY : help
 
 

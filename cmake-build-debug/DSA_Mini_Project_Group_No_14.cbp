@@ -78,7 +78,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/mainblock.c">
+		<Unit filename="/home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/validate.c">
 			<Option target="DSA_Mini_Project_Group_No_14"/>
 		</Unit>
 		<Unit filename="/home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/CMakeLists.txt">
