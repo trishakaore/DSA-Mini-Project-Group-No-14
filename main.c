@@ -2,7 +2,7 @@
 #include "transaction.c"
 #include "user.c"
 #include "attack_1.c"
-#include "validate.c"
+//#include "validate.c"
 #include <ctype.h>
 
 int main()
@@ -17,15 +17,15 @@ int main()
     printf("                                                               ---------\n");
     printf("                                                      Project by group number 14\n\n");
 user_interface:
-    printf("\033[0mPlease enter a number to continue!\n\n");
+    printf("\033[0mPlease enter your choice to continue!\n\n");
     printf("\033[31menter \"add user\" to create a add user to the system\n");
-    printf("enter \"load users\" to load users\n");
-    printf("enter \"transaction\" to do a transaction\n");
-    printf("enter \"transaction history\" to display transcation history\n");
-    printf("enter \"attack\" to attack a block\n");
-    printf("enter \"validate\" to validate block chain\n");
-    printf("enter \"clear\" to clear screen\n");
-    printf("enter \"exit\" to exit");
+    printf("Enter \"load users\" to load users\n");
+    printf("Enter \"transaction\" to do a transaction\n");
+    printf("Enter \"transaction history\" to display transcation history\n");
+    printf("Enter \"attack\" to attack a block\n");
+    printf("Enter \"validate\" to validate block chain\n");
+    printf("Enter \"clear\" to clear screen\n");
+    printf("Enter \"exit\" to exit");
     printf("\033[0m\n\n");
     scanf("%[^\n]", choice);
     scanf("%c", &buf);
@@ -82,6 +82,7 @@ user_interface:
     {
         //validate_block_chain();
         //scanf("%c", &buf);
+        printf("\n\n");
         goto user_interface;
     }
     else if (strcmp(choice, "clear") == 0)
@@ -91,9 +92,20 @@ user_interface:
     }
     else if (strcmp(choice, "exit") == 0)
     {
-        system("clear");
-        printf("\n\e[0;92m                                                             THANK YOU!\n\n");
-        return (0);
+        printf("Are you sure want to exit? (y/n) ");
+        scanf("%c", &buf);
+        if (buf == 'y' || buf == 'Y')
+        {
+            system("clear");
+            printf("\n\e[0;92m                                                             THANK YOU!\n\n");
+            return (0);
+        }
+        else
+        {
+            scanf("%c", &buf);
+            printf("\n\n");
+            goto user_interface;
+        }
     }
     else
     {
