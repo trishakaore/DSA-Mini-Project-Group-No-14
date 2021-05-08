@@ -55,21 +55,26 @@ void transaction()
 
     if (userHash[to_ID - 1000].ID == to_ID && userHash[from_ID - 1000].ID == from_ID)
     {
-        if (userHash[from_ID - 1000].balance >= amount)
+        if (to_ID != from_ID)
         {
-            userHash[to_ID - 1000].balance += amount;
-            userHash[from_ID - 1000].balance -= amount;
+            if (userHash[from_ID - 1000].balance >= amount)
+            {
+                userHash[to_ID - 1000].balance += amount;
+                userHash[from_ID - 1000].balance -= amount;
 
-            updateHistory(from_ID, to_ID, amount, &userHash[from_ID - 1000].history);
+                updateHistory(from_ID, to_ID, amount, &userHash[from_ID - 1000].history);
 
-            update_trav(from_ID, to_ID, amount);
+                update_trav(from_ID, to_ID, amount);
 
-            //printHistory(userHash[from_ID - 1000].history);
-            
-            printf("\nSuccessfully transferred!\n");
+                //printHistory(userHash[from_ID - 1000].history);
+
+                printf("\nSuccessfully transferred!\n");
+            }
+            else
+                printf("Transaction Failed! - Invalid Amount\n");
         }
         else
-            printf("Transaction Failed! - Invalid Amount\n");
+            printf("Transaction Failed! - SENDER's UID cannot be the same as RECEIVER's UID\n");
     }
     else
         printf("Transaction Failed! - Invalid UID\n");
