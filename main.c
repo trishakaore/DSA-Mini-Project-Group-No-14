@@ -73,7 +73,7 @@ user_interface:
     else if (strcmp(choice, "attack") == 0)
     {
         attack();
-        scanf("%c", &buf);
+        //scanf("%c", &buf);
         printf("\n\n");
         goto user_interface;
     }
