@@ -65,6 +65,8 @@ void transaction()
             update_trav(from_ID, to_ID, amount);
 
             //printHistory(userHash[from_ID - 1000].history);
+            
+            printf("\nSuccessfully transferred!\n");
         }
         else
             printf("Transaction Failed! - Invalid Amount\n");
