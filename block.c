@@ -89,3 +89,19 @@ void GetBlocksFromFile(){
     //printf("blockchain ready\n");
     fclose(f);
 }
+
+void GetBackupVsFresh(){
+
+    printf("Do you want to restore data from backup files? (y/n): ");
+    char k;
+    scanf("%c",&k);
+    
+    if(k=='y'){
+        GetUserHash();
+        GetBlocksFromFile();
+    }
+    else{
+        initHash();
+        Init_block_chain();
+    }
+}
