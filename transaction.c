@@ -1,6 +1,5 @@
 #include "block.h"
 
-//#include <stdio.h>
 
 void update_trav(long int from_ID, long int to_ID, double amount)
 {
@@ -11,34 +10,44 @@ void update_trav(long int from_ID, long int to_ID, double amount)
     trav->t_array[transactions].amt = amount;
     transactions++;
 
-    if (transactions == 2)
+    if (transactions == 5)
         add_block();
-    //printf("block number: %d\n", block_num);
 }
 
-void updateHistory(long int from_ID, long int to_ID, double amount, struct transact **head_ref)
+void updateHistory(long int from_ID, long int to_ID, double amount)
 {
-    struct transact *next_transact = NULL;
-    next_transact = (struct transact *)malloc(sizeof(struct transact));
+    
+    userHash[from_ID-1000].history[userHash[from_ID-1000].transNum].to = to_ID;
+    userHash[from_ID-1000].history[userHash[from_ID-1000].transNum].from = from_ID;
+    userHash[from_ID-1000].history[userHash[from_ID-1000].transNum].amt = amount;
+    userHash[from_ID-1000].transNum++;
 
-    next_transact->to = to_ID;
-    next_transact->from = from_ID;
-    next_transact->amt = amount;
-    next_transact->next = (*head_ref);
-    (*head_ref) = next_transact;
+    userHash[to_ID-1000].history[userHash[to_ID-1000].transNum].to = to_ID;
+    userHash[to_ID-1000].history[userHash[to_ID-1000].transNum].from = from_ID;
+    userHash[to_ID-1000].history[userHash[to_ID-1000].transNum].amt = amount;
+    userHash[to_ID-1000].transNum++;
+
+
 }
 
 void printHistory()
 {
     long int from_ID;
+    long int i;
     printf("enter user's ID whose transaction history is to be displayed : ");
     scanf("%ld", &from_ID);
-    struct transact *temp = userHash[from_ID - 1000].history;
+    
+    if(userHash[from_ID-1000].ID == -1){
+        printf("Invalid UID!\n");
+        return;
+    }
+    
+    for(int k= 0; k< userHash[from_ID-1000].transNum;k++){
+        printf("From: %ld\n", userHash[from_ID-1000].history[k].from);
+        printf("To: %ld\n", userHash[from_ID-1000].history[k].to);
+        printf("Amount: %.2lf\n", userHash[from_ID-1000].history[k].amt);
+        printf("\n");
 
-    while (temp != NULL)
-    {
-        printf("sent from UID : %ld\nreceived by UID : %ld\namount transferred : %lf\n", temp->from, temp->to, temp->amt);
-        temp = temp->next;
     }
 }
 
@@ -52,25 +61,38 @@ void transaction()
     scanf("%ld", &to_ID);
     printf("enter amount to be transferred : ");
     scanf("%lf", &amount);
-
-    if (userHash[to_ID - 1000].ID == to_ID && userHash[from_ID - 1000].ID == from_ID)
+    if (amount > 0)
     {
-        if (userHash[from_ID - 1000].balance >= amount)
+        if (from_ID >= 1000 && from_ID <= 9999 && to_ID >= 1000 && to_ID <= 9999)
         {
-            userHash[to_ID - 1000].balance += amount;
-            userHash[from_ID - 1000].balance -= amount;
+            if (userHash[to_ID - 1000].ID == to_ID && userHash[from_ID - 1000].ID == from_ID)
+            {
+                if (to_ID != from_ID)
+                {
+                    if (userHash[from_ID - 1000].balance >= amount)
+                    {
+                        userHash[to_ID - 1000].balance += amount;
+                        userHash[from_ID - 1000].balance -= amount;
 
-            updateHistory(from_ID, to_ID, amount, &userHash[from_ID - 1000].history);
+                        updateHistory(from_ID, to_ID, amount);
 
-            update_trav(from_ID, to_ID, amount);
+                        update_trav(from_ID, to_ID, amount);
 
-            //printHistory(userHash[from_ID - 1000].history);
-            
-            printf("\nSuccessfully transferred!\n");
+
+                        printf("\nSuccessfully transferred!\n");
+                    }
+                    else
+                        printf("Transaction Failed! - Invalid Amount\n");
+                }
+                else
+                    printf("Transaction Failed! - SENDER's UID cannot be the same as RECEIVER's UID\n");
+            }
+            else
+                printf("Transaction Failed! - Invalid UID\n");
         }
         else
-            printf("Transaction Failed! - Invalid Amount\n");
+            printf("Transaction Failed! - Invalid UID\n");
     }
     else
-        printf("Transaction Failed! - Invalid UID\n");
+        printf("Anount cannot be 0 - Transaction Failed\n");
 }

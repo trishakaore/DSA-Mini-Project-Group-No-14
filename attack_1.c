@@ -1,48 +1,46 @@
-//#include <stdio.h>
+
 #include "block.h"
-//#include <stdbool.h>
 #include <time.h>
 
 void attack()
 {
     block_ptr t;
     t = trav; //note that trav is the global variable pointing to the last block
-    //int prev_nonce;
     int changed;
 
     srand(time(NULL));
     int rndnum = ((rand()) % 50) + 1;
     if (t != NULL)
     {
-
-        //t=t->next;
-        t = t->prev;
-
-        if (rndnum > t->block_index)
+        if (t->block_index > 1)
         {
-            printf("Attack failed\n");
-            return;
-        }
-
-        while (t != NULL)
-        {
-            if (t->block_index == rndnum)
+            t = t->prev;
+            if (rndnum > t->block_index)
             {
-                //prev_nonce = t->nonce;
-                changed = (rand() % 500) + 1;
-
-                while (changed == t->nonce)
+                printf("Attack failed\n");
+                return;
+            }
+            while (t != NULL)
+            {
+                if (t->block_index == rndnum)
                 {
                     changed = (rand() % 500) + 1;
-                }
-                printf("Attack Successful\n");
 
-                t->nonce = changed;
-                break;
+                    while (changed == t->nonce)
+                    {
+                        changed = (rand() % 500) + 1;
+                    }
+                    printf("Attack Successful\n");
+
+                    t->nonce = changed;
+                    break;
+                }
+                t = t->prev;
             }
-            t = t->prev;
         }
+        else
+            printf("Only first block present - cannot be attacked\n");
     }
     else
-        printf("Attack failed - No block formed to attack!");
+        printf("no block formed to attack");
 }
