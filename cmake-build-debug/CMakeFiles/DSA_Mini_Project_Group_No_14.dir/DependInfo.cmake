@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/validate.c" "/home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/cmake-build-debug/CMakeFiles/DSA_Mini_Project_Group_No_14.dir/validate.c.o"
+  "/home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/main.c" "/home/mkp/DSA/Miniproj/DSA-Mini-Project-Group-No-14/cmake-build-debug/CMakeFiles/DSA_Mini_Project_Group_No_14.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

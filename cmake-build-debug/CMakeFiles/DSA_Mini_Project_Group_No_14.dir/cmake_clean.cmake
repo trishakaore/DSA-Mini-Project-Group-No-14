@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/DSA_Mini_Project_Group_No_14.dir/validate.c.o"
+  "CMakeFiles/DSA_Mini_Project_Group_No_14.dir/main.c.o"
   "DSA_Mini_Project_Group_No_14"
   "DSA_Mini_Project_Group_No_14.pdb"
 )

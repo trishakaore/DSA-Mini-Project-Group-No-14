@@ -7,4 +7,4 @@ include_directories(.)
 
 add_executable(DSA_Mini_Project_Group_No_14
 
-        validate.c)
+        main.c)
