@@ -11,20 +11,22 @@ void attack()
     int changed;
 
     srand(time(NULL));
-    int rndnum = ((rand()) % 5 /*0*/) + 1;
+    int rndnum;
+    /*= ((rand()) % 5 /*0) + 1;*/
+    rndnum = 2;
     if (t != NULL)
     {
         if (t->block_index > 1)
         {
             //t=t->next;
             t = t->prev;
-
+            printf("%d\n", t->block_index);
             if (rndnum > t->block_index)
             {
                 printf("Attack failed\n");
                 return;
             }
-
+            printf("before while\n");
             while (t != NULL)
             {
                 //printf("goes in while\n");
@@ -44,6 +46,7 @@ void attack()
                 }
                 t = t->prev;
             }
+            printf("while passed\n");
         }
         else
             printf("Only first block present - cannot be attacked\n");
