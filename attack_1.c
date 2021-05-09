@@ -11,38 +11,43 @@ void attack()
     int changed;
 
     srand(time(NULL));
-    int rndnum = ((rand()) % 50) + 1;
+    int rndnum = ((rand()) % 5 /*0*/) + 1;
     if (t != NULL)
     {
-
-        //t=t->next;
-        t = t->prev;
-
-        if (rndnum > t->block_index)
+        if (t->block_index > 1)
         {
-            printf("Attack failed\n");
-            return;
-        }
-
-        while (t != NULL)
-        {
-            if (t->block_index == rndnum)
-            {
-                //prev_nonce = t->nonce;
-                changed = (rand() % 500) + 1;
-
-                while (changed == t->nonce)
-                {
-                    changed = (rand() % 500) + 1;
-                }
-                printf("Attack Successful\n");
-
-                t->nonce = changed;
-                break;
-            }
+            //t=t->next;
             t = t->prev;
+
+            if (rndnum > t->block_index)
+            {
+                printf("Attack failed\n");
+                return;
+            }
+
+            while (t != NULL)
+            {
+                //printf("goes in while\n");
+                if (t->block_index == rndnum)
+                {
+                    //prev_nonce = t->nonce;
+                    changed = (rand() % 500) + 1;
+
+                    while (changed == t->nonce)
+                    {
+                        changed = (rand() % 500) + 1;
+                    }
+                    printf("Attack Successful\n");
+
+                    t->nonce = changed;
+                    break;
+                }
+                t = t->prev;
+            }
         }
+        else
+            printf("Only first block present - cannot be attacked\n");
     }
     else
-        printf("Attack failed - No block formed to attack!");
+        printf("no block formed to attack");
 }
