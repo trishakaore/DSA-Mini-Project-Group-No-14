@@ -6,6 +6,7 @@
 #include <ctype.h>
 
 
+
 int main()
 {
     char buf,garb;
@@ -115,7 +116,7 @@ user_interface:
         }
         else
         {
-            scanf("%c", &buf);
+            //scanf("%c", &buf);
             printf("\n\n");
             goto user_interface;
         }
