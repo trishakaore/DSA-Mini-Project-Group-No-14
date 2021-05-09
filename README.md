@@ -1,8 +1,10 @@
                                                             BITCOIN
 
-By
-Ananya Sane     Trisha Kaore        M Krishna Praneet       G Vinaychandra Reddy        B Vishwateja Reddy
-2020102007      2020111021          2020113010              2020101010                  2020102058
+Ananya Sane             2020102007
+Trisha Kaore            2020111021
+M Krishna Praneet       2020113010
+G Vinaychandra Reddy    2020101010
+B Vishwateja Reddy      2020102058
 
 This project is an implementation of a blockchain. Although it is simplified, it still retains the core ideas of block hash values, privacy, validation and attack detection and mitigation.
 
