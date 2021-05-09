@@ -58,4 +58,4 @@ Implementation is done through file handling, and lends itself to easily dealing
 12. Now all the other functions may be used as required.
 13. To save changes to files when exiting, enter 'y' again when prompted. If 'y' is not entered then all the transactions made and users added in that run of the program will not be saved to files.
 
-                                                      Thank You
+                                                              Thank You
