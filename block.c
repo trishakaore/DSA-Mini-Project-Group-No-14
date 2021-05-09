@@ -1,5 +1,4 @@
 #include "block.h"
-//#include "validate.c"
 
 void GetBackupVsFresh()
 {
@@ -12,6 +11,7 @@ void GetBackupVsFresh()
     {
         GetUserHash();
         GetBlocksFromFile();
+
         block_num = trav->block_index;
 
         int i = 0;
@@ -52,15 +52,11 @@ void validate_block_chain()
         {
             //calc hash value using traverse.prev values and compare it with prevhash of traverse
             char *hashvalue = hashfunction(traverse->prev);
-            //hashvalue=hashfunction(traverse->prev);
-            //strcpy(hashvalue,hashfunction(traverse->prev));
-
-            printf("hash value = %s\nhash value present instead = %s\n", hashvalue, traverse->prev_block_hash);
+            
             if (/*they're not equal*/ strcmp(traverse->prev_block_hash, hashvalue) != 0)
             {
                 printf("%d block was attacked\n", traverse->prev->block_index); //testing purpose
-                //block_ptr temp=traverse;
-
+                
                 for (int i = 1; i <= 500; i++)
                 {
                     traverse->prev->nonce = i; //sjjsjjsj
@@ -100,21 +96,18 @@ block_ptr Init_block_chain()
         head->t_array[i].amt = 0;
     }
 
-    //trav = malloc(sizeof(block));
     trav = head;
     transactions = 0;
 
-    return head; //why global head?
+    return head; 
 }
 
-void add_block() //always validate before add?  //after transaction has been called, if transactions == 50, then add_block
+void add_block() //always validate before add  //after transaction has been called, if transactions == 50, then add_block
 {
     validate_block_chain();
     block_num++;
-    transactions = 0; //check
+    transactions = 0; 
 
-    //block_ptr tmp;
-    //char *hash_value = hashfunction;
     block_ptr tmp = malloc(sizeof(block));
 
     for (int i = 0; i < 50; i++)
@@ -129,26 +122,13 @@ void add_block() //always validate before add?  //after transaction has been cal
     trav->next = tmp;
     tmp->next = NULL;
     //must calc. the hash value of trav and store it in hash_value[30]
-    //strcpy(hash_value, hashfunction(trav->prev)); //trav->prev/trav
-    //strcpy(tmp->prev_block_hash, trav->prev_block_hash);
 
     tmp->prev = trav;
     trav = tmp;
     char *hash_value = hashfunction(trav->prev);
 
-    strcpy(trav->prev_block_hash, hash_value); // hafta do this using hash
-
-    //free(tmp);
-
-    //    trav->next = tmp;
-    //    //must calc. the hash value of trav and store it in hash_value[30]
-    //
-    //    trav = tmp;
-    //
-    //    trav->next = NULL;
-    //    trav->nonce = (rand() % 500) + 1;
-    //    trav->block_index = block_num;
-    //    strcpy(trav->prev_block_hash, hash_value);   // hafta do this using hash
+    strcpy(trav->prev_block_hash, hash_value); // have to do this using hash
+    
 }
 
 void WriteBlocksToFile()

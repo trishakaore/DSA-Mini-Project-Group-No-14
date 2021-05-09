@@ -26,15 +26,13 @@ struct Block
 {
     int block_index;
     block_transact t_array[50];
-    char prev_block_hash[30];
+    char prev_block_hash[20];
     int nonce;
     block_ptr prev;
     block_ptr next;
 };
 
 block_ptr head, trav;
-
-//block_ptr block_array = NULL;
 
 block_ptr Init_block_chain();
 

@@ -10,6 +10,7 @@ typedef struct datee datee;
 typedef struct transact transact;
 typedef struct timee timee;
 #define size 9000
+#define histsize 100
 
 struct datee
 {
@@ -29,14 +30,14 @@ struct transact
     long to;
     long from;
     double amt;
-    transact *next;
 };
 
 struct user
 {
     long ID;
     double balance;
-    transact *history;
+    int transNum;
+    transact history[histsize];
     datee join;
     timee tim;
 };
@@ -52,7 +53,7 @@ void setTime(long);
 
 void transaction();
 void printHistory();
-void updateHistory(long int from_ID, long int to_ID, double amount, struct transact **head_ref);
+void updateHistory(long int from_ID, long int to_ID, double amount);
 void update_trav(long int from_ID, long int to_ID, double amount);
 void printUsers();
 
