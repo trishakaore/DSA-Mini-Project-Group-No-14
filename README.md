@@ -1,4 +1,4 @@
-                                                     BITCOIN
+                                                         BITCOIN
 
 Ananya Sane             
 2020102007
@@ -40,7 +40,7 @@ We have written the hash function ourselves and tested it extensively to conclud
 Our project also accomodates storage of users and the block chain in files. These can be used as to backup data.
 Implementation is done through file handling, and lends itself to easily dealing with large amounts of users and transactions.
 
-                                        Running the program:
+                                           Running the program:
 
 1. Open create_users.c, and change UserNum to the number of users required.
 2. Run gcc create_users.c -o create_users
@@ -58,4 +58,4 @@ Implementation is done through file handling, and lends itself to easily dealing
 12. Now all the other functions may be used as required.
 13. To save changes to files when exiting, enter 'y' again when prompted. If 'y' is not entered then all the transactions made and users added in that run of the program will not be saved to files.
 
-                                           Thank You
+                                              Thank You
