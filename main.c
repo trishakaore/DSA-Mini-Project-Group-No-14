@@ -3,6 +3,7 @@
 #include "user.c"
 #include "attack_1.c"
 //#include "validate.c"
+#include "hash.c"
 #include <ctype.h>
 
 int main()
@@ -18,7 +19,7 @@ int main()
     printf("                                                      Project by group number 14\n\n");
 user_interface:
     printf("\033[0mPlease enter your choice to continue!\n\n");
-    printf("\033[31menter \"add user\" to create a add user to the system\n");
+    printf("\033[31mEnter \"add user\" to create a add user to the system\n");
     printf("Enter \"load users\" to load users\n");
     printf("Enter \"transaction\" to do a transaction\n");
     printf("Enter \"transaction history\" to display transcation history\n");
@@ -80,7 +81,7 @@ user_interface:
     }
     else if (strcmp(choice, "validate") == 0)
     {
-        //validate_block_chain();
+        validate_block_chain();
         //scanf("%c", &buf);
         printf("\n\n");
         goto user_interface;
