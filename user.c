@@ -119,7 +119,7 @@ void makeUser()
     
     //print details of user just created
     printf("ID: %ld\n", id);
-    printf("Balance: %lf\n", userHash[id - 1000].balance);
+    printf("Balance: %.2lf\n", userHash[id - 1000].balance);
     printf("Date : %02d/%02d/%02d\n", userHash[id - 1000].join.dd, userHash[id - 1000].join.mm, userHash[id - 1000].join.yy);
     printf("Time : %02d:%02d\n", userHash[id - 1000].tim.hrs, userHash[id - 1000].tim.min);
 }
