@@ -1,4 +1,4 @@
-                                                           **BITCOIN**
+                                                           BITCOIN
 
 Ananya Sane             
 2020102007
@@ -38,7 +38,7 @@ We have written the hash function ourselves and tested it extensively to conclud
 Our project also accomodates storage of users and the block chain in files. These can be used to backup data.
 Implementation is done through file handling, and lends itself to easily dealing with large amounts of users and transactions.
 
-                                                   **Running the program**
+                                                   Running the program
 
 1. For the testcases we have set number of users to be created to 100 and number of transactions to 1250. If you wish to change these values then
    - Open ```create_users.c```, and change UserNum to the number of users required. The program can handle 9000 users at max, but we recommend not exceeding 5000 to ensure smoother functioning.
