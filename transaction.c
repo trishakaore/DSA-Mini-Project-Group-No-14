@@ -45,7 +45,7 @@ void printHistory()                                                             
         printf("Invalid UID!\n");
         return;
     }
-    printf("total number of transactions : %d\n", userHash[from_ID-1000].transNum+1);    //prints the number of transactions of the user whose UID has been entered by the user.
+    printf("total number of transactions : %d\n", userHash[from_ID-1000].transNum);    //prints the number of transactions of the user whose UID has been entered by the user.
     
     for(int k= 0; k< userHash[from_ID-1000].transNum;k++)
     {
