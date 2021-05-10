@@ -69,7 +69,7 @@ void transaction()                                                              
     scanf("%lf", &amount);
     if (amount > 0)                                                                              //checks if the amount of transferred is greater than 0, if not, goes to the else statement instead.
     {
-        if (from_ID >= 1000 && from_ID <= 9999 && to_ID >= 1000 && to_ID <= 9999)                //checks if the UID is in the range od UID's, if not, goes to the else statement instead.
+        if (from_ID >= 1000 && from_ID <= 9999 && to_ID >= 1000 && to_ID <= 9999)                //checks if the UID is in the range of UID's, if not, goes to the else statement instead.
         {
             if (userHash[to_ID - 1000].ID == to_ID && userHash[from_ID - 1000].ID == from_ID)    //checks if both the SENDER's UID and the RECEIVER's UID exist, if not, goes to the else statement instead.
             {
