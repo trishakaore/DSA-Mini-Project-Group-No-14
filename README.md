@@ -19,7 +19,7 @@ B Vishwateja Reddy
 
 This project is an implementation of a blockchain. Although it is simplified, it still retains the core ideas of block hash values, privacy, validation and attack detection and mitigation.
 
-Our implementation accomodates the following functions:
+Our implementation accomodates the following functions among others that go on behind the scenes:
 
 1. View list of users and their details
 2. Perform transactions
@@ -27,17 +27,15 @@ Our implementation accomodates the following functions:
 4. View a certain user's transaction history
 5. Attempt an attack (this will change the nonce)
 6. Validate the blockchain - detect an attack and undo it by restoring the nonce value
-7. Storage and retrieval of the user database and the blockchain from files to allow for backup even after the program excecution has ended.
-
-among others that go on behind the scenes.
+7. Storage and retrieval of the user database and the blockchain from files to allow for backup even after the program excecution has ended
 
 Each block in the block chain conists of 50 transactions.
 
 The hash values of the blocks are calculated using the parameters - transactions, block number and nonce.
 
-We have written the hash function ourselves and tested it extensively to conclude that it is void of duplication, and for our purposes.
+We have written the hash function ourselves and tested it extensively to conclude that it is void of duplication, and serves our purposes.
 
-Our project also accomodates storage of users and the block chain in files. These can be used as to backup data.
+Our project also accomodates storage of users and the block chain in files. These can be used to backup data.
 Implementation is done through file handling, and lends itself to easily dealing with large amounts of users and transactions.
 
                                                    Running the program:
